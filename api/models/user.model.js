@@ -15,7 +15,7 @@ const userSchema = new mongoose.Schema(
     password: {
       type: String,
       required: true,
-      match: /^[a-zA-Z0-9]*$/, // Only allow letters and numbers
+      // match: /^[a-zA-Z0-9]*$/, // Only allow letters and numbers
     },
   },
   { timestamps: true }
