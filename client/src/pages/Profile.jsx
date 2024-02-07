@@ -21,7 +21,7 @@ import {
   signOutUserStart,
 } from "../redux/user/userSlice";
 import { useDispatch } from "react-redux";
-
+import { Link } from "react-router-dom";
 export default function Profile() {
   const fileRef = useRef(null);
   const { currentUser, loading, error } = useSelector((state) => state.user);
@@ -150,7 +150,7 @@ export default function Profile() {
           onClick={() => fileRef.current.click()}
           src={formData.avatar || currentUser.avatar}
           alt="profile"
-          className="rounded-full h-24 w-24 object-cover cursor-pointer self-center mt-2"
+          className="rounded-full h-100 w-100 object-cover cursor-pointer self-center mt-2"
         />
 
         <input
@@ -197,6 +197,12 @@ export default function Profile() {
         >
           {loading ? "Loading..." : "Update"}
         </button>
+        <Link
+          className="bg-green-700 text-white p-3 rounded-lg uppercase text-center hover:opacity-95"
+          to={"/create-listing"}
+        >
+          Create Listing
+        </Link>
       </form>
       <div className="flex justify-between mt-5">
         <span
