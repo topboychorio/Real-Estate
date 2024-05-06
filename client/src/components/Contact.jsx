@@ -20,6 +20,7 @@ export default function Contact({ listing }) {
     };
     fetchLandlord();
   }, [listing.userRef]);
+
   return (
     <>
       {landlord && (
@@ -50,3 +51,12 @@ export default function Contact({ listing }) {
     </>
   );
 }
+
+import PropTypes from "prop-types";
+
+Contact.propTypes = {
+  listing: PropTypes.shape({
+    name: PropTypes.string.isRequired,
+    userRef: PropTypes.string.isRequired,
+  }).isRequired,
+};

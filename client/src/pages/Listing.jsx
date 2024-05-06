@@ -9,8 +9,6 @@ import {
   FaBath,
   FaBed,
   FaChair,
-  // eslint-disable-next-line no-unused-vars
-  FaMapMarkedAlt,
   FaMapMarkerAlt,
   FaParking,
   FaShare,
